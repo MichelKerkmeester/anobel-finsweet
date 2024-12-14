@@ -1,41 +1,41 @@
-/* Inputs */
+/* Input field */
 
 /* Caret styling */
 input,
 textarea,
 select {
-  caret-color: var(--color-primary--base); /* Color of the text cursor */
+  caret-color: var(--color-content--primary); /* Color of the text cursor */
 }
 
 /* Placeholder styles */
 .w-input[data-placeholder]::placeholder,
 .w-select[data-placeholder]::placeholder {
   content: attr(data-current-placeholder) !important;
-  transition: color 0.2s ease !important;
-  color: var(--color-neutral--darker) !important;
+  transition: color 0.3s ease-out !important;
+  color: var(--color-content--gray) !important;
 }
 
 .w-input[data-placeholder].hovered::placeholder,
 .w-select[data-placeholder].hovered::placeholder {
-  color: var(--color-secondary--base) !important;
+  color: var(--color-neutral--darkest) !important;
 }
 
 /* Custom focus style for mouse/touch */
 input.w--focus,
 textarea.w--focus,
 select.w--focus {
-  border: 1px solid var(--color-neutral--base) !important;
-  outline: 0px solid var(--color-neutral--dark) !important;
-  transition: border 0.2s ease;
+  border: 2px solid var(--color-secondary--base) !important;
+  outline: 0px solid var(--color-state--focused) !important;
+  transition: border 0.3s ease-out;
 }
 
 /* Custom focus style for keyboard navigation */
 input.w--focus-visible,
 textarea.w--focus-visible,
 select.w--focus-visible {
-  border: 1px solid var(--color-neutral--base) !important;
-  outline: 4px solid var(--color-neutral--dark) !important;
-  transition: border 0.2s ease;
+  border: 2px solid var(--color-neutral--base) !important;
+  outline: 4px solid var(--color-state--focused) !important;
+  transition: border 0.3s ease-out;
 }
 
 /* Text area */

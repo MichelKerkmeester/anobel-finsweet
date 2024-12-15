@@ -17,7 +17,8 @@
 /*----------------------
   CLEAR WF STYLES
 ----------------------*/
-button {
+button,
+a.w-button {
   background: none;
   border: none;
   padding: 0;
@@ -25,6 +26,11 @@ button {
   cursor: pointer;
   outline: inherit;
   display: block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* Button */

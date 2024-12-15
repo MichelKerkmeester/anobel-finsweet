@@ -6,9 +6,19 @@
 
   /* Containers */
   /* MAIN */
-  --container--main: calc(
-    min(100%, var(--page--max-width)) - var(--page--padding) * 2
-  );
+  --container--main: calc(min(100%, var(--page--max-width)) - var(--page--padding) * 2);
+
   /* FULL WIDTH */
   --container--full-width: calc(100% - var(--page--padding) * 2);
+}
+
+/* Margin trim */
+/* Remove margin from the first and last child */
+.u--margin-trim > :first-child,
+.u--margin-trim > :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
+  margin-top: 0;
+}
+.u--margin-trim > :last-child,
+.u--margin-trim > :not(:has(~ :not(.w-condition-invisible))) {
+  margin-bottom: 0;
 }

@@ -26,8 +26,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #053b77;
 }
-
-/* Hide loader in Webflow Editor */
-body.w-editor-body .page--loader {
-  display: none !important;
-}

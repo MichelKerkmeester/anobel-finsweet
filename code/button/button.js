@@ -13,10 +13,12 @@ const btnAnimation = () => {
 
       // Define animation
       timeline
+        .set(iconAbsolute, { opacity: 0 })
         .to(
           iconAbsolute,
           {
             x: '0%',
+            opacity: 1,
             duration: 0.3,
             ease: 'power1.out',
           },
@@ -26,19 +28,11 @@ const btnAnimation = () => {
           iconBase,
           {
             x: '200%',
+            opacity: 0,
             duration: 0.3,
             ease: 'power0',
           },
           0
-        )
-        .to(
-          iconBase,
-          {
-            opacity: 0,
-            duration: 0.2,
-            ease: 'power1.out',
-          },
-          '-=0.1'
         );
 
       // Event listeners

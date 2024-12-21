@@ -1,5 +1,5 @@
-// Input field: Select
-// Custom placeholder & Focus states
+/* Input field: Select */
+
 /* Hide bottom border on last dropdown item */
 .input--select-link:last-child {
   border-bottom: none;

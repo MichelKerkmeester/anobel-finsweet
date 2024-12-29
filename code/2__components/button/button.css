@@ -58,7 +58,7 @@ a.w-button {
 
 /* Base */
 [data-btn-size='Base'] {
-  font-size: var(--typography-size--large);
+  font-size: var(--typography-size--base);
   width: 2.5rem;
   height: 2.5rem;
   padding-left: 1rem;
@@ -547,5 +547,42 @@ a.w-button {
 /* Focused (Keyboard) */
 [data-btn-type='CTA-Dark']:focus-visible {
   border: 2px solid var(--color-primary--darkest);
+  outline: 4px solid var(--color-state--focused);
+}
+
+/* Button: Navigation */
+/*----------------------
+  TYPES
+----------------------*/
+/* Enabled */
+[data-btn-type='Navigation'] {
+  background-color: var(--color-secondary--base);
+  color: var(--color-content--white);
+  border: 0;
+  font-weight: 400;
+}
+
+/* Hover  */
+[data-btn-type='Navigation']:hover {
+  background-color: var(--color-secondary--darker);
+  color: var(--color-content--white);
+  border: 0;
+}
+
+/* Pressed  */
+[data-btn-type='Navigation']:active {
+  background-color: var(--color-secondary--darkest);
+  color: var(--color-content--white);
+  border: 0;
+}
+
+/* Focused */
+[data-btn-type='Navigation']:focus {
+  border: 0;
+}
+
+/* Focused (Keyboard) */
+[data-btn-type='Navigation']:focus-visible {
+  border: 0;
   outline: 4px solid var(--color-state--focused);
 }

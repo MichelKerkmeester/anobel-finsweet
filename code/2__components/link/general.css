@@ -1,0 +1,52 @@
+/* Link : General */
+/*----------------------
+  WEIGHT
+----------------------*/
+/* Regular */
+[data-link-weight='Regular'] {
+  font-weight: 400;
+}
+
+/* Semi Bold */
+[data-link-weight='Semi Bold'] {
+  font-weight: 600;
+}
+
+/*----------------------
+  TYPE
+----------------------*/
+/* Dark
+----------------------*/
+[data-link-type='Dark'] {
+  color: var(--color-content--secondary);
+}
+
+[data-link-type='Dark'] .link--heading {
+  color: var(--color-content--secondary);
+}
+
+[data-link-type='Dark'] .link--description {
+  color: var(--color-content--secondary);
+}
+
+[data-link-type='Dark'] .link--divider-track {
+  background-color: var(--color-border-neutral--dark);
+}
+
+/* Light
+----------------------*/
+[data-link-type='Light'] {
+  color: var(--color-content--white);
+}
+
+[data-link-type='Light'] .link--heading {
+  color: var(--color-content--white);
+}
+
+[data-link-type='Light'] .link--description {
+  color: var(--color-content--white);
+}
+
+[data-link-type='Light'] .link--divider-track {
+  background-color: var(--color-border-secondary--base);
+}

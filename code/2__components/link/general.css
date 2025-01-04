@@ -13,10 +13,24 @@
 }
 
 /*----------------------
+  DIRECTION
+----------------------*/
+/* Default */
+[data-link-direction='Horizontal'] {
+  flex-direction: row;
+}
+
+/* Space Between */
+[data-link-direction='Vertical'] {
+  flex-direction: column;
+}
+
+/*----------------------
   TYPE
 ----------------------*/
 /* Dark
 ----------------------*/
+/* Enabled */
 [data-link-type='Dark'] {
   color: var(--color-content--secondary);
 }
@@ -35,6 +49,7 @@
 
 /* Light
 ----------------------*/
+/* Enabled */
 [data-link-type='Light'] {
   color: var(--color-content--white);
 }
@@ -44,9 +59,40 @@
 }
 
 [data-link-type='Light'] .link--description {
-  color: var(--color-content--white);
+  color: var(--color-content-gray--secondary);
 }
 
 [data-link-type='Light'] .link--divider-track {
-  background-color: var(--color-border-secondary--base);
+  background-color: var(--color-base--white);
+}
+
+/* Card
+----------------------*/
+/* Enabled */
+[data-link-type='Card'] {
+  color: var(--color-content--white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+[data-link-type='Card'] .link--heading {
+  color: var(--color-content--white);
+}
+
+[data-link-type='Card'] .link--description {
+  color: var(--color-content-gray--secondary);
+}
+
+[data-link-type='Card'] .link--divider-track {
+  background-color: var(--color-base--white);
+}
+
+/* Hover */
+[data-link-type='Card']:hover {
+  background-color: var(--color-secondary--darker);
+}
+
+/* Pressed */
+[data-link-type='Card']:active {
+  background-color: rgba(3, 29, 60, 0.8);
 }

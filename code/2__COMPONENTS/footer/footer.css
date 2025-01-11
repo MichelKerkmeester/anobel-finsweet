@@ -1,0 +1,8 @@
+/* Footer */
+
+/* Mobile */
+@media screen and (max-width: 540px) {
+  .footer--nav {
+    flex-direction: column;
+  }
+}

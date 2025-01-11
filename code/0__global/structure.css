@@ -1,7 +1,10 @@
 /* Structure */
 :root {
   /* Page */
-  --page--padding: 5vw; /* Horizontal padding */
+  --page--padding: 5vw; /* Desktop/default horizontal padding */
+  --page--padding-tablet: 4rem; /* Tablet horizontal padding */
+  --page--padding-small-tablet: 2rem; /* Small tablet horizontal padding */
+  --page--padding-mobile: 1.5rem; /* Mobile horizontal padding */
   --page--max-width: 100rem; /* Maximum width of the page */
 
   /* Containers */
@@ -10,6 +13,33 @@
 
   /* FULL WIDTH */
   --container--full-width: calc(100% - var(--page--padding) * 2);
+}
+
+/* Tablet breakpoint */
+@media screen and (max-width: 991px) {
+  :root {
+    --page--padding: var(--page--padding-tablet);
+    --container--main: calc(100% - var(--page--padding) * 2);
+    --container--full-width: 100%;
+  }
+}
+
+/* Small tablet breakpoint */
+@media screen and (max-width: 767px) {
+  :root {
+    --page--padding: var(--page--padding-small-tablet);
+    --container--main: calc(100% - var(--page--padding) * 2);
+    --container--full-width: 100%;
+  }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 479px) {
+  :root {
+    --page--padding: var(--page--padding-mobile);
+    --container--main: calc(100% - var(--page--padding) * 2);
+    --container--full-width: 100%;
+  }
 }
 
 /* Margin trim */

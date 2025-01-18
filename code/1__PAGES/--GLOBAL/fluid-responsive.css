@@ -2,8 +2,8 @@
 
 /* Variables */
 :root {
-  --font-from-0: 13;
-  --font-to-0: 15;
+  --font-from-0: 14;
+  --font-to-0: 16;
   --vw-from-0: calc(1 / 100);
   --vw-to-0: calc(991 / 100);
   --coefficient-0: calc(

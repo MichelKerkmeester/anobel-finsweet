@@ -140,7 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Attach event listeners to each dropdown toggle
   dropdownData.forEach((d) => {
     d.toggle.addEventListener('click', (event) => {
-      event.stopPropagation(); // Prevent event from bubbling to the document
+      // IMPORTANT: We removed `event.stopPropagation()` to allow clicks
+      // to bubble up to the document-level listener in other scripts
+      // event.stopPropagation();
 
       if (d.animating) return; // Prevent action if animating
 

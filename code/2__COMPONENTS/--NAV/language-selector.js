@@ -88,10 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleDropdown(isClicked);
   });
 
-  // Close dropdown if clicking outside the button or dropdown
+  // Close dropdown if clicking outside the button or dropdown, or on another dropdown trigger
   document.addEventListener('click', (event) => {
     const isInside = languageBtn.contains(event.target) || languageDropdown.contains(event.target);
-    if (!isInside && languageBtn.classList.contains('clicked')) {
+    const isDropdownTrigger = event.target.closest('.btn--nav-dropdown');
+
+    if (
+      (!isInside && languageBtn.classList.contains('clicked')) ||
+      (isDropdownTrigger && !languageDropdown.contains(isDropdownTrigger))
+    ) {
       languageBtn.classList.remove('clicked');
       toggleDropdown(false);
 

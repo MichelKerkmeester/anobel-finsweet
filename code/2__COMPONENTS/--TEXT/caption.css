@@ -5,12 +5,12 @@
 /* Large */
 
 [data-caption-size='Large'] .caption {
-  font-size: var(--typography-size--large);
+  font-size: var(--_typography---size--large);
 }
 
 /* Base */
 [data-caption-size='Base'] .caption {
-  font-size: var(--typography-size--base);
+  font-size: var(--_typography---size--base);
 }
 
 /*----------------------
@@ -18,16 +18,16 @@
 ----------------------*/
 /* Dark */
 [data-caption-Type='Dark'] .caption {
-  color: var(--color-content--secondary);
+  color: var(--_color-tokens---content--secondary);
 }
 [data-caption-Type='Dark'] .caption--divider {
-  background-color: var(--color-bg--blue);
+  background-color: var(--_color-tokens---bg--blue);
 }
 
 /* Light */
 [data-caption-Type='Light'] .caption {
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
 }
 [data-caption-Type='Light'] .caption--divider {
-  background-color: var(--color-bg--white);
+  background-color: var(--_color-tokens---bg--white);
 }

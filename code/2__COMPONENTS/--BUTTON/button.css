@@ -39,7 +39,7 @@ a.w-button {
 ----------------------*/
 /* Large */
 [data-btn-size='Large'] {
-  font-size: var(--typography-size--large);
+  font-size: var(--_typography---size--large);
   width: 3rem;
   height: 3rem;
   padding-left: 1.25rem;
@@ -58,7 +58,7 @@ a.w-button {
 
 /* Base */
 [data-btn-size='Base'] {
-  font-size: var(--typography-size--base);
+  font-size: var(--_typography---size--base);
   width: 2.5rem;
   height: 2.5rem;
   padding-left: 1rem;
@@ -77,7 +77,7 @@ a.w-button {
 
 /* Dynamic */
 [data-btn-size='Dynamic'] {
-  font-size: var(--typography-size--base);
+  font-size: var(--_typography---size--base);
   width: 2.5rem;
   height: 2.5rem;
   padding-left: 1rem;
@@ -96,7 +96,7 @@ a.w-button {
 
 @media screen and (max-width: 991px) {
   [data-btn-size='Dynamic'] {
-    font-size: var(--typography-size--large);
+    font-size: var(--_typography---size--large);
     width: 3rem;
     height: 3rem;
     padding-left: 1.25rem;
@@ -149,68 +149,68 @@ a.w-button {
 ----------------------*/
 /* Enabled */
 [data-btn-type='Primary-Full'] {
-  background-color: var(--color-primary--base);
-  color: var(--color-content--white);
+  background-color: var(--primary--base);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Hover  */
 [data-btn-type='Primary-Full']:hover {
-  background-color: var(--color-primary--darker);
-  color: var(--color-content--white);
+  background-color: var(--primary--darker);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Pressed  */
 [data-btn-type='Primary-Full']:active {
-  background-color: var(--color-primary--darkest);
-  color: var(--color-content--white);
+  background-color: var(--primary--darkest);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Focused */
 [data-btn-type='Primary-Full']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Primary-Full']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Primary | Ghost (Light)
 ----------------------*/
 /* Enabled */
 [data-btn-type='Primary-Ghost-Light'] {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--base);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--base);
 }
 
 /* Hover  */
 [data-btn-type='Primary-Ghost-Light']:hover {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--darker);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--darker);
 }
 
 /* Pressed  */
 [data-btn-type='Primary-Ghost-Light']:active {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--darkest);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused */
 [data-btn-type='Primary-Ghost-Light']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Primary-Ghost-Light']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Primary | Ghost (Dark)
@@ -218,101 +218,101 @@ a.w-button {
 /* Enabled */
 [data-btn-type='Primary-Ghost-Dark'] {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--base);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--base);
 }
 
 /* Hover  */
 [data-btn-type='Primary-Ghost-Dark']:hover {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--darker);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--darker);
 }
 
 /* Pressed  */
 [data-btn-type='Primary-Ghost-Dark']:active {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--darkest);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused */
 [data-btn-type='Primary-Ghost-Dark']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Primary-Ghost-Dark']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Secondary | Full
 ----------------------*/
 /* Enabled */
 [data-btn-type='Secondary-Full'] {
-  background-color: var(--color-secondary--base);
-  color: var(--color-content--white);
-  border: 0px solid var(--color-secondary--base);
+  background-color: var(--secondary--base);
+  color: var(--_color-tokens---content--white);
+  border: 0px solid var(--secondary--base);
 }
 
 /* Hover  */
 [data-btn-type='Secondary-Full']:hover {
-  background-color: var(--color-secondary--darker);
-  color: var(--color-content--white);
-  border: 0px solid var(--color-secondary--darker);
+  background-color: var(--secondary--darker);
+  color: var(--_color-tokens---content--white);
+  border: 0px solid var(--secondary--darker);
 }
 
 /* Pressed  */
 [data-btn-type='Secondary-Full']:active {
-  background-color: var(--color-secondary--darkest);
-  color: var(--color-content--white);
-  border: 0px solid var(--color-secondary--darkest);
+  background-color: var(--secondary--darkest);
+  color: var(--_color-tokens---content--white);
+  border: 0px solid var(--secondary--darkest);
 }
 
 /* Focused */
 [data-btn-type='Secondary-Full']:focus {
-  border: 2px solid var(--color-secondary--darkest);
+  border: 2px solid var(--secondary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Secondary-Full']:focus-visible {
-  border: 2px solid var(--color-secondary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--secondary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Secondary | Ghost
 ----------------------*/
 /* Enabled */
 [data-btn-type='Secondary-Ghost'] {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--secondary);
-  border: 2px solid var(--color-secondary--base);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--secondary);
+  border: 2px solid var(--secondary--base);
 }
 
 /* Hover  */
 [data-btn-type='Secondary-Ghost']:hover {
-  background-color: var(--color-bg--white);
-  color: var(--color-secondary--darkest);
-  border: 2px solid var(--color-secondary--darkest);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--secondary--darkest);
+  border: 2px solid var(--secondary--darkest);
 }
 
 /* Pressed  */
 [data-btn-type='Secondary-Ghost']:active {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-content--black);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--_color-tokens---content--black);
 }
 
 /* Focused */
 [data-btn-type='Secondary-Ghost']:focus {
-  border: 2px solid var(--color-secondary--darkest);
+  border: 2px solid var(--secondary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Secondary-Ghost']:focus-visible {
-  border: 2px solid var(--color-secondary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--secondary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Secondary | Transparent
@@ -320,33 +320,33 @@ a.w-button {
 /* Enabled */
 [data-btn-type='Secondary-Transparent'] {
   background-color: transparent;
-  color: var(--color-content--secondary);
+  color: var(--_color-tokens---content--secondary);
   border: 0px solid;
 }
 
 /* Hover  */
 [data-btn-type='Secondary-Transparent']:hover {
-  background-color: var(--color-secondary--lightest);
-  color: var(--color-content--secondary);
+  background-color: var(--secondary--lightest);
+  color: var(--_color-tokens---content--secondary);
   border: 0px solid;
 }
 
 /* Pressed  */
 [data-btn-type='Secondary-Transparent']:active {
-  background-color: var(--color-secondary--lighter);
-  color: var(--color-content--secondary);
+  background-color: var(--secondary--lighter);
+  color: var(--_color-tokens---content--secondary);
   border: 0px solid;
 }
 
 /* Focused */
 [data-btn-type='Secondary-Transparent']:focus {
-  border: 2px solid var(--color-secondary--darkest);
+  border: 2px solid var(--secondary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Secondary-Transparent']:focus-visible {
-  border: 2px solid var(--color-secondary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--secondary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Tertiary | Transparent
@@ -354,99 +354,99 @@ a.w-button {
 /* Enabled */
 [data-btn-type='Tertiary-Transparent'] {
   background-color: transparent;
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Hover  */
 [data-btn-type='Tertiary-Transparent']:hover {
-  background-color: var(--color-secondary--lightest);
-  color: var(--color-content--white);
+  background-color: var(--secondary--lightest);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 /* Pressed  */
 [data-btn-type='Tertiary-Transparent']:active {
-  background-color: var(--color-secondary--lighter);
-  color: var(--color-content--white);
+  background-color: var(--secondary--lighter);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Focused */
 [data-btn-type='Tertiary-Transparent']:focus {
-  border: 2px solid var(--color-secondary--darkest);
+  border: 2px solid var(--secondary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Tertiary-Transparent']:focus-visible {
-  border: 2px solid var(--color-secondary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--secondary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Warning | Full
 ----------------------*/
 /* Enabled */
 [data-btn-type='Warning-Full'] {
-  background-color: var(--color-warning--base);
-  color: var(--color-content--white);
+  background-color: var(--warning--base);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Hover  */
 [data-btn-type='Warning-Full']:hover {
-  background-color: var(--color-warning--darker);
-  color: var(--color-content--white);
+  background-color: var(--warning--darker);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Pressed  */
 [data-btn-type='Warning-Full']:active {
-  background-color: var(--color-warning--darkest);
-  color: var(--color-content--white);
+  background-color: var(--warning--darkest);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Focused */
 [data-btn-type='Warning-Full']:focus {
-  border: 2px solid var(--color-warning--darkest);
+  border: 2px solid var(--warning--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Warning-Full']:focus-visible {
-  outline: 4px solid var(--color-state--focused);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Warning | Ghost
 ----------------------*/
 /* Enabled */
 [data-btn-type='Warning-Ghost'] {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--warning);
-  border: 2px solid var(--color-warning--base);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--warning);
+  border: 2px solid var(--warning--base);
 }
 
 /* Hover  */
 [data-btn-type='Warning-Ghost']:hover {
-  background-color: var(--color-bg--white);
-  color: var(--color-warning--darkest);
-  border: 2px solid var(--color-warning--darkest);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--warning--darkest);
+  border: 2px solid var(--warning--darkest);
 }
 
 /* Pressed  */
 [data-btn-type='Warning-Ghost']:active {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-content--black);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--_color-tokens---content--black);
 }
 
 /* Focused */
 [data-btn-type='Warning-Ghost']:focus {
-  border: 2px solid var(--color-warning--darkest);
+  border: 2px solid var(--warning--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Warning-Ghost']:focus-visible {
-  border: 2px solid var(--color-warning--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--warning--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Warning | Transparent
@@ -454,33 +454,33 @@ a.w-button {
 /* Enabled */
 [data-btn-type='Warning-Transparent'] {
   background-color: transparent;
-  color: var(--color-content--warning);
+  color: var(--_color-tokens---content--warning);
   border: 0px solid;
 }
 
 /* Hover  */
 [data-btn-type='Warning-Transparent']:hover {
-  background-color: var(--color-warning--lightest);
-  color: var(--color-content--warning);
+  background-color: var(--warning--lightest);
+  color: var(--_color-tokens---content--warning);
   border: 0px solid;
 }
 
 /* Pressed  */
 [data-btn-type='Warning-Transparent']:active {
-  background-color: var(--color-warning--lighter);
-  color: var(--color-warning--base);
+  background-color: var(--warning--lighter);
+  color: var(--warning--base);
   border: 0px solid;
 }
 
 /* Focused */
 [data-btn-type='Warning-Transparent']:focus {
-  border: 2px solid var(--color-warning--darkest);
+  border: 2px solid var(--warning--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='Warning-Transparent']:focus-visible {
-  border: 2px solid var(--color-warning--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--warning--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Button: CTA */
@@ -491,68 +491,68 @@ a.w-button {
 ----------------------*/
 /* Enabled */
 [data-btn-type='CTA-Icon'] {
-  background-color: var(--color-primary--base);
-  color: var(--color-content--white);
+  background-color: var(--primary--base);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Hover  */
 [data-btn-type='CTA-Icon']:hover {
-  background-color: var(--color-primary--darker);
-  color: var(--color-content--white);
+  background-color: var(--primary--darker);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Pressed  */
 [data-btn-type='CTA-Icon']:active {
-  background-color: var(--color-primary--darkest);
-  color: var(--color-content--white);
+  background-color: var(--primary--darkest);
+  color: var(--_color-tokens---content--white);
   border: 0px solid;
 }
 
 /* Focused */
 [data-btn-type='CTA-Icon']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='CTA-Icon']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Background: Light
 ----------------------*/
 /* Enabled */
 [data-btn-type='CTA-Light'] {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--base);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--base);
 }
 
 /* Hover  */
 [data-btn-type='CTA-Light']:hover {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--darker);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--darker);
 }
 
 /* Pressed  */
 [data-btn-type='CTA-Light']:active {
-  background-color: var(--color-bg--white);
-  color: var(--color-content--black);
-  border: 2px solid var(--color-primary--darkest);
+  background-color: var(--_color-tokens---bg--white);
+  color: var(--_color-tokens---content--black);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused */
 [data-btn-type='CTA-Light']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='CTA-Light']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Background: Dark
@@ -560,33 +560,33 @@ a.w-button {
 /* Enabled */
 [data-btn-type='CTA-Dark'] {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--base);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--base);
 }
 
 /* Hover  */
 [data-btn-type='CTA-Dark']:hover {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--darker);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--darker);
 }
 
 /* Pressed  */
 [data-btn-type='CTA-Dark']:active {
   background-color: rgba(10, 10, 10, 0.25);
-  color: var(--color-content--white);
-  border: 2px solid var(--color-primary--darkest);
+  color: var(--_color-tokens---content--white);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused */
 [data-btn-type='CTA-Dark']:focus {
-  border: 2px solid var(--color-primary--darkest);
+  border: 2px solid var(--primary--darkest);
 }
 
 /* Focused (Keyboard) */
 [data-btn-type='CTA-Dark']:focus-visible {
-  border: 2px solid var(--color-primary--darkest);
-  outline: 4px solid var(--color-state--focused);
+  border: 2px solid var(--primary--darkest);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }
 
 /* Button: Navigation */
@@ -595,23 +595,23 @@ a.w-button {
 ----------------------*/
 /* Enabled */
 [data-btn-type='Navigation'] {
-  background-color: var(--color-secondary--base);
-  color: var(--color-content--white);
+  background-color: var(--secondary--base);
+  color: var(--_color-tokens---content--white);
   border: 0;
   font-weight: 400;
 }
 
 /* Hover  */
 [data-btn-type='Navigation']:hover {
-  background-color: var(--color-secondary--darker);
-  color: var(--color-content--white);
+  background-color: var(--secondary--darker);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
 /* Pressed  */
 [data-btn-type='Navigation']:active {
-  background-color: var(--color-secondary--darkest);
-  color: var(--color-content--white);
+  background-color: var(--secondary--darkest);
+  color: var(--_color-tokens---content--white);
   border: 0;
 }
 
@@ -623,5 +623,5 @@ a.w-button {
 /* Focused (Keyboard) */
 [data-btn-type='Navigation']:focus-visible {
   border: 0;
-  outline: 4px solid var(--color-state--focused);
+  outline: 4px solid var(--_color-tokens---state--focused);
 }

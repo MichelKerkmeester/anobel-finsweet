@@ -1,4 +1,4 @@
-/* Link : General */
+/* Link: General */
 /*----------------------
   WEIGHT
 ----------------------*/
@@ -32,64 +32,64 @@
 ----------------------*/
 /* Enabled */
 [data-link-type='Dark'] {
-  color: var(--color-content--secondary);
+  color: var(--_color-tokens---content--secondary);
 }
 
 [data-link-type='Dark'] .link--heading {
-  color: var(--color-content--secondary);
+  color: var(--_color-tokens---content--secondary);
 }
 
 [data-link-type='Dark'] .link--description {
-  color: var(--color-content--secondary);
+  color: var(--_color-tokens---content--secondary);
 }
 
 [data-link-type='Dark'] .link--divider-track {
-  background-color: var(--color-border-neutral--dark);
+  background-color: var(--_color-tokens---border-neutral--dark);
 }
 
 /* Light
 ----------------------*/
 /* Enabled */
 [data-link-type='Light'] {
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
 }
 
 [data-link-type='Light'] .link--heading {
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
 }
 
 [data-link-type='Light'] .link--description {
-  color: var(--color-content-gray--secondary);
+  color: var(--_color-tokens---content-gray--secondary);
 }
 
 [data-link-type='Light'] .link--divider-track {
-  background-color: var(--color-base--white);
+  background-color: var(--base--white);
 }
 
 /* Card
 ----------------------*/
 /* Enabled */
 [data-link-type='Card'] {
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
 
 [data-link-type='Card'] .link--heading {
-  color: var(--color-content--white);
+  color: var(--_color-tokens---content--white);
 }
 
 [data-link-type='Card'] .link--description {
-  color: var(--color-content-gray--secondary);
+  color: var(--_color-tokens---content-gray--secondary);
 }
 
 [data-link-type='Card'] .link--divider-track {
-  background-color: var(--color-base--white);
+  background-color: var(--base--white);
 }
 
 /* Hover */
 [data-link-type='Card']:hover {
-  background-color: var(--color-secondary--darker);
+  background-color: var(--secondary--darker);
 }
 
 /* Pressed */

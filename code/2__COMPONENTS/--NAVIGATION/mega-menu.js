@@ -16,6 +16,7 @@ const lottieAnimation = lottie.loadAnimation({
 
 // Function to open the menu
 function openMenu() {
+  megaMenu.style.display = 'flex'; // Set display to flex before animation
   gsap.to(megaMenu, {
     duration: 0.8,
     height: '100svh',
@@ -37,6 +38,9 @@ function closeMenu() {
     height: '0svh',
     width: '100%',
     ease: 'power2.in',
+    onComplete: () => {
+      megaMenu.style.display = 'none'; // Hide menu after animation completes
+    },
   });
   lottieAnimation.playSegments([70, 140], true);
   lottieAnimation.addEventListener('complete', () => {

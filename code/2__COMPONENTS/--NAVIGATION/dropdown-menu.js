@@ -17,30 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Initialize dropdown data
+  // Initialize dropdown data with clearer naming
   const dropdownData = dropdowns
     .map((dropdown) => {
-      const toggle = dropdown.querySelector('.btn--nav-dropdown');
-      const menu = dropdown.querySelector('.nav--dropdown-menu');
-      const icon = dropdown.querySelector('.icon--svg.is--nav');
+      // Elements that control the dropdown interaction
+      const dropdownToggle = dropdown.querySelector('.btn--nav-dropdown');
+      const dropdownMenu = dropdown.querySelector('.nav--dropdown-menu');
+      const dropdownIcon = dropdown.querySelector('.icon--svg.is--nav');
 
-      if (!toggle || !menu || !icon) {
+      if (!dropdownToggle || !dropdownMenu || !dropdownIcon) {
         console.warn(
-          'Some required elements (toggle, menu, icon) are missing in a .nav--dropdown!'
+          'Some required elements (dropdownToggle, dropdownMenu, dropdownIcon) are missing in a .nav--dropdown!'
         );
         return null;
       }
 
       return {
         dropdown,
-        toggle,
-        menu,
-        icon,
-        isOpen: false,
-        animating: false,
+        toggle: dropdownToggle, // Button that triggers dropdown
+        menu: dropdownMenu, // Content container that shows/hides
+        icon: dropdownIcon, // Rotation indicator for dropdown state
+        isOpen: false, // Tracks if menu is visible
+        animating: false, // Prevents interaction during animations
       };
     })
-    .filter((d) => d !== null); // Filter out nulls
+    .filter((d) => d !== null);
 
   /**
    * Utility function to create a GSAP timeline for opening a dropdown
@@ -56,12 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     tl.fromTo(
-      d.menu,
+      d.dropdownMenu,
       { opacity: 0, height: 0 },
       { opacity: 1, height: 'auto', duration: 0.3, ease: 'power2.out' }
     )
-      .to(d.icon, { rotation: 180, duration: 0.3, ease: 'power2.out' }, '<')
-      .to(d.toggle, { backgroundColor: 'var(--color-secondary--darkest)', duration: 0.3 }, '<')
+      .to(d.dropdownIcon, { rotation: 180, duration: 0.3, ease: 'power2.out' }, '<')
+      .to(
+        d.dropdownToggle,
+        { backgroundColor: 'var(--color-secondary--darkest)', duration: 0.3 },
+        '<'
+      )
       .to(
         navigation,
         {
@@ -90,12 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     tl.fromTo(
-      d.menu,
-      { opacity: 1, height: d.menu.scrollHeight },
+      d.dropdownMenu,
+      { opacity: 1, height: d.dropdownMenu.scrollHeight },
       { opacity: 0, height: 0, duration: 0.3, ease: 'power2.in' }
     )
-      .to(d.icon, { rotation: 0, duration: 0.3, ease: 'power2.in' }, '<')
-      .to(d.toggle, { backgroundColor: '', duration: 0.3 }, '<')
+      .to(d.dropdownIcon, { rotation: 0, duration: 0.3, ease: 'power2.in' }, '<')
+      .to(d.dropdownToggle, { backgroundColor: '', duration: 0.3 }, '<')
       .to(
         navigation,
         {
@@ -140,10 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Attach event listeners to each dropdown toggle
   dropdownData.forEach((d) => {
     d.toggle.addEventListener('click', (event) => {
-      // IMPORTANT: We removed `event.stopPropagation()` to allow clicks
-      // to bubble up to the document-level listener in other scripts
-      // event.stopPropagation();
-
       if (d.animating) return; // Prevent action if animating
 
       // Toggle the dropdown

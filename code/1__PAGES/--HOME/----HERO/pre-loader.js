@@ -1,51 +1,74 @@
 // Hero
-// Pre-loader
+// Intro Animation
+
+// Pre-loader setup
+function initializePreloader() {
+  gsap.set('.preloader', {
+    opacity: 1,
+    scale: 1,
+  });
+
+  gsap.set('.preloader--inner', {
+    scaleY: 0, // Start with no height for a smoother effect
+    transformOrigin: 'top center',
+  });
+
+  // Smooth fade-out for preloader
+  gsap.to('.preloader', {
+    opacity: 0,
+    scale: 0.9,
+    duration: 0.8,
+    ease: 'power2.inOut',
+    delay: 1.5, // Adjust delay as needed
+    onComplete: () => {
+      document.querySelector('.preloader').style.display = 'none'; // Hide preloader after animation
+    },
+  });
+}
 
 // Initial setup
 function initializeHeroStates() {
   const vw = window.innerWidth;
+  const vh = window.innerHeight;
   const isDesktop = vw >= 992;
   const isTablet = vw >= 768 && vw < 992;
 
   gsap.set('.hero--content', {
     opacity: 0,
     y: '100%',
-    scale: 0.95,
+    scale: 0.92,
+    willChange: 'opacity, transform', // Optimize for performance
   });
 
-  // Set different initial heights based on device
+  gsap.set(['.hero--header', '.hero--service-list'], {
+    opacity: 0,
+    y: isDesktop ? '2rem' : isTablet ? '1.5rem' : '1rem',
+    willChange: 'opacity, transform', // Optimize for performance
+  });
+
   gsap.set('.hero--section.is--home', {
-    height: () => {
-      if (isDesktop) return '100svh';
-      if (isTablet) return '92.5svh';
-      return '90svh'; // Mobile
-    },
+    height: isDesktop ? '100svh' : isTablet ? '95svh' : '90svh',
   });
 
-  gsap.set('.page--wrapper > *', {
-    opacity: 0,
-  });
+  gsap.set('.hero--video-container', { padding: 0 });
 
-  // Initialize any text elements within hero content
-  gsap.set('.hero--content h1, .hero--content p, .hero--content .button', {
-    opacity: 0,
-    y: '30px',
-  });
-
-  // Set border radius for .hero--video-w with transform isolation
-  gsap.set('.hero--video-w', {
-    borderRadius: '1rem',
+  gsap.set('.hero--video', {
+    borderRadius: 0,
+    scale: 1.05,
     transformStyle: 'preserve-3d',
     backfaceVisibility: 'hidden',
     perspective: 1000,
+    willChange: 'transform', // Optimize for performance
   });
 }
-
-// Main animation timeline
-function playHeroIntro() {
+// GSAP Timeline
+function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
   const vw = window.innerWidth;
+  const vh = window.innerHeight;
   const isDesktop = vw >= 992;
   const isTablet = vw >= 768 && vw < 992;
+  const isMobileLarge = vw >= 480 && vw < 768;
+  const isMobile = vw < 480;
 
   const tl = gsap.timeline({
     defaults: {
@@ -53,71 +76,103 @@ function playHeroIntro() {
     },
   });
 
-  // Set initial state of video with transform isolation
-  tl.set('.hero--video-w', {
-    borderRadius: '1rem',
-    transformStyle: 'preserve-3d',
-    backfaceVisibility: 'hidden',
-    perspective: 1000,
-  })
-    // Change from .page--wrapper to .page--wrapper > *
-    .to('.page--wrapper > *', {
+  // Start Phase 1 after "phase1Delay"
+  tl.to({}, { duration: phase1Delay });
+
+  // PHASE 1: Initial container shape animation
+  tl.to(
+    ['.hero--video-container', '.hero--video-w'],
+    {
+      duration: 1,
+      borderRadius: (index) => (index === 1 ? '1rem' : 0),
+      padding: (index) => {
+        if (index === 0) {
+          return isDesktop
+            ? '2rem'
+            : isTablet
+              ? '7rem 2rem 0 2rem'
+              : isMobileLarge
+                ? '6.5rem 1.5rem 0 1.5rem'
+                : '5rem 1.5rem 0 1.5rem';
+        }
+        return 0;
+      },
+      scale: 1,
       opacity: 1,
+      ease: 'power2.out',
+    },
+    'phase1'
+  );
+
+  // Delay Between Phase 1 & Phase 2
+  tl.to({}, { duration: delayBetweenPhase1And2 });
+
+  // PHASE 2: Dramatic height reduction & content entry
+  tl.to(
+    '.hero--section.is--home',
+    {
+      height: isDesktop
+        ? vh <= 800
+          ? '87.5svh'
+          : vh <= 1049
+            ? '80svh'
+            : '75svh'
+        : isTablet
+          ? '85svh'
+          : '85svh',
+      duration: 1.8,
+      ease: 'power4.inOut',
+    },
+    '-=0.8'
+  );
+
+  tl.to(
+    '.hero--content',
+    {
+      opacity: 1,
+      y: '0%',
+      scale: 1,
       duration: 1.2,
-      ease: 'power2.inOut',
-    })
+      ease: 'power2.out',
+    },
+    '-=0.9'
+  );
 
-    // Animate hero section height with bounce
-    .to(
-      '.hero--section.is--home',
-      {
-        height: () => {
-          if (isDesktop) return '80svh';
-          if (isTablet) return '75svh';
-          return '70svh'; // Mobile
-        },
-        duration: 1.8,
-        ease: 'power4.inOut',
-      },
-      '-=0.8'
-    )
-
-    // Animate hero content with scale
-    .to(
-      '.hero--content',
-      {
-        opacity: 1,
-        y: '0%',
-        scale: 1,
-        duration: 1.2,
-        ease: 'power2.out',
-      },
-      '-=0.9'
-    )
-
-    // Stagger animate text elements
-    .to(
-      '.hero--content h1, .hero--content p, .hero--content .button',
-      {
-        opacity: 1,
-        y: '0',
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power2.out',
-      },
-      '-=0.8'
-    );
-
-  // Ensure border radius stays after animation
-  tl.set('.hero--video-w', {
-    borderRadius: '1rem',
-  });
+  // Increased stagger for content animation
+  tl.to(
+    ['.hero--header', '.hero--service-list'],
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2, // Adjusted stagger for better flow
+      ease: 'power2.out',
+    },
+    '-=1.4'
+  );
 
   return tl;
 }
 
 // Initialize and play animation when DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
+  initializePreloader();
   initializeHeroStates();
-  playHeroIntro();
+
+  createHeroIntroTimeline({
+    phase1Delay: 0,
+    delayBetweenPhase1And2: 0.2,
+  });
+
+  // Optional: Add ScrollTrigger for interactive animations
+  gsap.to('.hero--video', {
+    scrollTrigger: {
+      trigger: '.hero--section.is--home',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+    },
+    scale: 1.1,
+    borderRadius: '2rem',
+  });
 });

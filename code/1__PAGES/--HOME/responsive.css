@@ -7,15 +7,3 @@
     display: none;
   }
 }
-
-/* Nobel */
-
-/* Desktop */
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .nobel--container.is--right {
-    padding-left: clamp(3rem, 7.5vw, 6rem);
-  }
-  .nobel--container.is--left {
-    padding-right: clamp(3rem, 7.5vw, 6rem);
-  }
-}

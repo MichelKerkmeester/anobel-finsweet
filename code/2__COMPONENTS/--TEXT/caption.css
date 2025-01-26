@@ -31,3 +31,22 @@
 [data-caption-Type='Light'] .caption--divider {
   background-color: var(--_color-tokens---bg--white);
 }
+
+/* Dynamic */
+@media screen and (min-width: 992px) {
+  [data-caption-Type='Dynamic'] .caption {
+    color: var(--_color-tokens---content--secondary);
+  }
+  [data-caption-Type='Dynamic'] .caption--divider {
+    background-color: var(--_color-tokens---bg--blue);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  [data-caption-Type='Dynamic'] .caption {
+    color: var(--_color-tokens---content--white);
+  }
+  [data-caption-Type='Dynamic'] .caption--divider {
+    background-color: var(--_color-tokens---bg--white);
+  }
+}

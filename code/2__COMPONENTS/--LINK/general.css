@@ -44,7 +44,7 @@
 }
 
 [data-link-type='Dark'] .link--divider-track {
-  background-color: var(--_color-tokens---border-neutral--dark);
+  background-color: var(--_color-tokens---border-neutral--darkest);
 }
 
 /* Light
@@ -59,7 +59,7 @@
 }
 
 [data-link-type='Light'] .link--description {
-  color: var(--_color-tokens---content-gray--secondary);
+  color: var(--_color-tokens---content-gray--neutral);
 }
 
 [data-link-type='Light'] .link--divider-track {
@@ -80,7 +80,7 @@
 }
 
 [data-link-type='Card'] .link--description {
-  color: var(--_color-tokens---content-gray--secondary);
+  color: var(--_color-tokens---content-gray--neutral);
 }
 
 [data-link-type='Card'] .link--divider-track {

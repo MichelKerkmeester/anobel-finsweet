@@ -44,7 +44,7 @@
 }
 
 [data-link-type='Dark'] .link--divider-track {
-  background-color: var(--_color-tokens---border-neutral--darkest);
+  background-color: var(--_color-tokens---border-neutral--dark);
 }
 
 /* Light

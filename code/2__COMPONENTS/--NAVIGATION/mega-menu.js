@@ -39,12 +39,21 @@ function closeMenu() {
     width: '100%',
     ease: 'power2.in',
     onComplete: () => {
-      megaMenu.style.display = 'none'; // Hide menu after animation completes
+      megaMenu.style.display = 'none';
     },
   });
+
+  // Remove any existing complete listeners first
+  lottieAnimation.removeEventListener('complete');
+
+  // Play the close animation
   lottieAnimation.playSegments([70, 140], true);
+
+  // Add the complete listener
   lottieAnimation.addEventListener('complete', () => {
     lottieAnimation.goToAndStop(0, true);
+    // Remove the listener after it executes to prevent memory leaks
+    lottieAnimation.removeEventListener('complete');
   });
 }
 

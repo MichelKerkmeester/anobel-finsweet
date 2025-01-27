@@ -10,17 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Select the main navigation container once
-  const navigation = document.querySelector('.navigation');
+  const navigation = document.querySelector('.nav--bar');
 
   if (!navigation) {
     console.error('Navigation container (.navigation) not found!');
     return;
   }
 
-  // Initialize dropdown data with clearer naming
+  // Initialize dropdown data
   const dropdownData = dropdowns
     .map((dropdown) => {
-      // Elements that control the dropdown interaction
       const dropdownToggle = dropdown.querySelector('.btn--nav-dropdown');
       const dropdownMenu = dropdown.querySelector('.nav--dropdown-menu');
       const dropdownIcon = dropdown.querySelector('.icon--svg.is--nav');
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return {
         dropdown,
         toggle: dropdownToggle, // Button that triggers dropdown
-        menu: dropdownMenu, // Content container that shows/hides
+        dropdownMenu: dropdownMenu, // (Renamed from "menu" to "dropdownMenu")
         icon: dropdownIcon, // Rotation indicator for dropdown state
         isOpen: false, // Tracks if menu is visible
         animating: false, // Prevents interaction during animations
@@ -56,18 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
 
+    // Check if we're on desktop (window width > 768px)
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+
     tl.fromTo(
       d.dropdownMenu,
       { opacity: 0, height: 0 },
       { opacity: 1, height: 'auto', duration: 0.3, ease: 'power2.out' }
     )
-      .to(d.dropdownIcon, { rotation: 180, duration: 0.3, ease: 'power2.out' }, '<')
-      .to(
-        d.dropdownToggle,
-        { backgroundColor: 'var(--color-secondary--darkest)', duration: 0.3 },
-        '<'
-      )
-      .to(
+      .to(d.icon, { rotation: 180, duration: 0.3, ease: 'power2.out' }, '<')
+      .to(d.toggle, { backgroundColor: 'var(--secondary--darkest)', duration: 0.3 }, '<');
+
+    // Only add border radius animation on desktop
+    if (isDesktop) {
+      tl.to(
         navigation,
         {
           borderBottomLeftRadius: '0',
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '<'
       );
+    }
 
     return tl;
   };
@@ -94,14 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
 
+    // Check if we're on desktop (window width > 768px)
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+
     tl.fromTo(
       d.dropdownMenu,
       { opacity: 1, height: d.dropdownMenu.scrollHeight },
       { opacity: 0, height: 0, duration: 0.3, ease: 'power2.in' }
     )
-      .to(d.dropdownIcon, { rotation: 0, duration: 0.3, ease: 'power2.in' }, '<')
-      .to(d.dropdownToggle, { backgroundColor: '', duration: 0.3 }, '<')
-      .to(
+      .to(d.icon, { rotation: 0, duration: 0.3, ease: 'power2.in' }, '<')
+      .to(d.toggle, { backgroundColor: '', duration: 0.3 }, '<');
+
+    // Only add border radius animation on desktop
+    if (isDesktop) {
+      tl.to(
         navigation,
         {
           borderBottomLeftRadius: '1rem',
@@ -111,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '<'
       );
+    }
 
     return tl;
   };
@@ -144,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach event listeners to each dropdown toggle
   dropdownData.forEach((d) => {
-    d.toggle.addEventListener('click', (event) => {
+    d.toggle.addEventListener('click', () => {
       if (d.animating) return; // Prevent action if animating
 
       // Toggle the dropdown

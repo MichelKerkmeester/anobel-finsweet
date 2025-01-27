@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle the button's background color based on state
     gsap.to(languageBtn, {
       backgroundColor: isOpen
-        ? 'var(--color-secondary--darkest)'
-        : 'var(--color-secondary--darker)',
+        ? 'var(--secondary--darkest)'
+        : 'var(--secondary--darker)',
       duration: 0.3,
     });
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!languageBtn.classList.contains('clicked')) {
       gsap.to(languageBtn, {
         width: '4.75rem',
-        backgroundColor: 'var(--color-secondary--darker)',
+        backgroundColor: 'var(--secondary--darker)',
         duration: 0.3,
         ease: 'power2.out',
       });
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!languageBtn.classList.contains('clicked')) {
       gsap.to(languageBtn, {
         width: '2rem',
-        backgroundColor: 'var(--color-secondary--darker)',
+        backgroundColor: 'var(--secondary--darker)',
         duration: 0.3,
         ease: 'power2.in',
       });
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Perform the hover-out action to reset the button width
       gsap.to(languageBtn, {
         width: '2rem',
-        backgroundColor: 'var(--color-secondary--darker)',
+        backgroundColor: 'var(--secondary--darker)',
         duration: 0.3,
         ease: 'power2.in',
       });

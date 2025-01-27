@@ -1,37 +1,13 @@
 // Hero
 // Intro Animation
 
-// Pre-loader setup
-function initializePreloader() {
-  gsap.set('.preloader', {
-    opacity: 1,
-    scale: 1,
-  });
-
-  gsap.set('.preloader--inner', {
-    scaleY: 0, // Start with no height for a smoother effect
-    transformOrigin: 'top center',
-  });
-
-  // Smooth fade-out for preloader
-  gsap.to('.preloader', {
-    opacity: 0,
-    scale: 0.9,
-    duration: 0.8,
-    ease: 'power2.inOut',
-    delay: 1.5, // Adjust delay as needed
-    onComplete: () => {
-      document.querySelector('.preloader').style.display = 'none'; // Hide preloader after animation
-    },
-  });
-}
-
 // Initial setup
 function initializeHeroStates() {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const isDesktop = vw >= 992;
   const isTablet = vw >= 768 && vw < 992;
+  const isMobileTall = vw < 480 && vh >= 650; // New breakpoint
 
   gsap.set('.hero--content', {
     opacity: 0,
@@ -47,7 +23,7 @@ function initializeHeroStates() {
   });
 
   gsap.set('.hero--section.is--home', {
-    height: isDesktop ? '100svh' : isTablet ? '95svh' : '90svh',
+    height: isDesktop ? '100svh' : isTablet ? '95svh' : isMobileTall ? '95svh' : '90svh',
   });
 
   gsap.set('.hero--video-container', { padding: 0 });
@@ -61,6 +37,7 @@ function initializeHeroStates() {
     willChange: 'transform', // Optimize for performance
   });
 }
+
 // GSAP Timeline
 function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
   const vw = window.innerWidth;
@@ -68,6 +45,7 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
   const isDesktop = vw >= 992;
   const isTablet = vw >= 768 && vw < 992;
   const isMobileLarge = vw >= 480 && vw < 768;
+  const isMobileTall = vw < 480 && vh >= 650; 
   const isMobile = vw < 480;
 
   const tl = gsap.timeline({
@@ -115,11 +93,13 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
         ? vh <= 800
           ? '87.5svh'
           : vh <= 1049
-            ? '80svh'
-            : '75svh'
+            ? '85svh'
+            : '77.5svh'
         : isTablet
           ? '85svh'
-          : '85svh',
+          : isMobileTall
+            ? '80svh'
+            : '85svh',
       duration: 1.8,
       ease: 'power4.inOut',
     },
@@ -156,7 +136,6 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
 
 // Initialize and play animation when DOM is ready
 window.addEventListener('DOMContentLoaded', () => {
-  initializePreloader();
   initializeHeroStates();
 
   createHeroIntroTimeline({

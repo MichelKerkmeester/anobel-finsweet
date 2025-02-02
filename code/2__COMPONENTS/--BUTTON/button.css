@@ -387,7 +387,7 @@ a.w-button {
 ----------------------*/
 /* Enabled */
 [data-btn-type='Warning-Full'] {
-  background-color: var(--warning--base);
+  background-color: var(--warning--dark);
   color: var(--base--white);
   border: 0px solid;
 }
@@ -421,8 +421,8 @@ a.w-button {
 /* Enabled */
 [data-btn-type='Warning-Ghost'] {
   background-color: var(--base--white);
-  color: var(--warning--base);
-  border: 2px solid var(--warning--base);
+  color: var(--warning--dark);
+  border: 2px solid var(--warning--dark);
 }
 
 /* Hover  */

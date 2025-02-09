@@ -296,14 +296,14 @@ a.w-button {
 [data-btn-type='Secondary-Ghost'] {
   color: var(--secondary--base);
   background-color: var(--base--white);
-  border: 2px solid var(--secondary--base);
+  border: 2px solid var(--neutral--dark);
 }
 
 /* Hover  */
 [data-btn-type='Secondary-Ghost']:hover {
-  color: var(--secondary--darkest);
+  color: var(--secondary--base);
   background-color: var(--base--white);
-  border: 2px solid var(--secondary--darkest);
+  border: 2px solid var(--secondary--base);
 }
 
 /* Pressed  */

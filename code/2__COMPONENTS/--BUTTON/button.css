@@ -266,14 +266,14 @@ a.w-button {
 /* Hover  */
 [data-btn-type='Secondary-Full']:hover {
   color: var(--base--white);
-  background-color: var(--secondary--darker);
+  background-color: var(--secondary--darkest);
   border: 0;
 }
 
 /* Pressed  */
 [data-btn-type='Secondary-Full']:active {
   color: var(--base--white);
-  background-color: var(--secondary--darkest);
+  background-color: var(--base--black);
   border: 0;
 }
 
@@ -338,7 +338,7 @@ a.w-button {
 /* Hover  */
 [data-btn-type='Secondary-Transparent']:hover {
   color: var(--secondary--base);
-  background-color: var(--secondary--lightest);
+  background-color: var(--secondary--lighter);
   border: 0;
 }
 
@@ -410,14 +410,14 @@ a.w-button {
 /* Hover  */
 [data-btn-type='Warning-Full']:hover {
   color: var(--base--white);
-  background-color: var(--warning--darker);
+  background-color: var(--warning--darkest);
   border: 0;
 }
 
 /* Pressed  */
 [data-btn-type='Warning-Full']:active {
   color: var(--base--white);
-  background-color: var(--warning--darkest);
+  background-color: var(--base--black);
   border: 0;
 }
 

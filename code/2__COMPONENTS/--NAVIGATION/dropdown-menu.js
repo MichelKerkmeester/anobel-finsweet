@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Utility function to create a GSAP timeline for opening a dropdown
    */
-  const createOpenTimeline = (d) => {
+z  const createOpenTimeline = (d) => {
     const tl = gsap.timeline({
       onStart: () => {
         d.animating = true;

@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
           duration: 0.45,
           ease: 'power2.out',
         },
-        '-=0.35'
-      ) // Start slightly before line animation ends
+        '<'
+      ) // Start at same time as line animation
       .to(
         icon,
         {

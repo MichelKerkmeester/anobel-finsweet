@@ -81,150 +81,150 @@
 ----------------------*/
 /* Enabled */
 [data-text-link-type='Blue'] {
-  color: var(--secondary--base);
+  color: var(--_color-tokens---content-brand--base);
 }
 
 [data-text-link-type='Blue'] .btn--text-link-hover {
-  background-color: var(--secondary--base);
+  background-color: var(--_color-tokens---border-brand--base);
 }
 
 /* Hover — Color */
 [data-text-link-type='Blue']:hover {
-  color: var(--secondary--darkest);
+  color: var(--_color-tokens---content-brand--darkest);
 }
 
 [data-text-link-type='Blue']:hover .btn--text-link-hover {
-  background-color: var(--secondary--darkest);
+  background-color: var(--_color-tokens---border-brand--darkest);
 }
 
 /* Hover — Underline*/
 [data-text-link-type='Blue'][data-text-link-hover='Underline']:hover {
-  color: var(--secondary--base);
+  color: var(--_color-tokens---content-brand--base);
 }
 
 [data-text-link-type='Blue'][data-text-link-hover='Underline']:hover .btn--text-link-hover {
-  background-color: var(--secondary--base);
+  background-color: var(--_color-tokens---border-brand--base);
 }
 
 /* Pressed */
 [data-text-link-type='Blue']:active {
-  color: var(--secondary--darkest);
+  color: var(--_color-tokens---content-neutral--black);
 }
 
 [data-text-link-type='Blue']:active .btn--text-link-hover {
-  background-color: var(--secondary--darkest);
+  background-color: var(--_color-tokens---border-neutral--black);
 }
 
 /* Gray
 ----------------------*/
 /* Enabled */
 [data-text-link-type='Gray'] {
-  color: var(--neutral--darkest);
+  color: var(--_color-tokens---content-neutral--base);
 }
 
 [data-text-link-type='Gray'] .btn--text-link-hover {
-  background-color: var(--neutral--darkest);
+  background-color: var(--_color-tokens---border-neutral--darkest);
 }
 
 /* Hover — Color */
 [data-text-link-type='Gray']:hover {
-  color: var(--base--black);
+  color: var(--_color-tokens---content-brand--base);
 }
 
 [data-text-link-type='Gray']:hover .btn--text-link-hover {
-  background-color: var(--base--black);
+  background-color: var(--_color-tokens---border-brand--base);
 }
 
 /* Hover — Underline*/
 [data-text-link-type='Gray'][data-text-link-hover='Underline']:hover {
-  color: var(--neutral--darkest);
+  color: var(--_color-tokens---content-neutral--dark);
 }
 
 [data-text-link-type='Gray'][data-text-link-hover='Underline']:hover .btn--text-link-hover {
-  background-color: var(--neutral--darkest);
+  background-color: var(--_color-tokens---border-neutral--darkest);
 }
 
 /* Pressed */
 [data-text-link-type='Gray']:active {
-  color: var(--base--black);
+  color: var(--_color-tokens---content-neutral--black);
 }
 
 [data-text-link-type='Gray']:active .btn--text-link-hover {
-  background-color: var(--base--black);
+  background-color: var(--_color-tokens---border-neutral--black);
 }
 
 /* White
 ----------------------*/
 /* Enabled */
 [data-text-link-type='White'] {
-  color: var(--base--white);
+  color: var(--_color-tokens---content-neutral--white);
 }
 
 [data-text-link-type='White'] .btn--text-link-hover {
-  background-color: var(--base--white);
+  background-color: var(--_color-tokens---border-neutral--white);
 }
 
 /* Hover — Color */
 [data-text-link-type='White']:hover {
-  color: var(--neutral--dark);
+  color: var(--_color-tokens---content-neutral--light);
 }
 
 [data-text-link-type='White']:hover .btn--text-link-hover {
-  background-color: var(--neutral--dark);
+  background-color: var(--_color-tokens---border-neutral--base);
 }
 
 /* Hover — Underline*/
 [data-text-link-type='White'][data-text-link-hover='Underline']:hover {
-  color: var(--base--white);
+  color: var(--_color-tokens---content-neutral--white);
 }
 
 [data-text-link-type='White'][data-text-link-hover='Underline']:hover .btn--text-link-hover {
-  background-color: var(--cbase--white);
+  background-color: var(--_color-tokens---border-neutral--white);
 }
 
 /* Pressed */
 [data-text-link-type='White']:active {
-  color: var(--neutral--dark);
+  color: var(--_color-tokens---content-neutral--black);
 }
 
 [data-text-link-type='White']:active .btn--text-link-hover {
-  background-color: var(--neutral--dark);
+  background-color: var(--_color-tokens---border-neutral--black);
 }
 
 /* Red
 ----------------------*/
 /* Enabled */
 [data-text-link-type='Red'] {
-  color: var(--warning--base);
+  color: var(--_color-tokens---state--warning);
 }
 
 [data-text-link-type='Red'] .btn--text-link-hover {
-  background-color: var(--warning--base);
+  background-color: var(--_color-tokens---state--warning);
 }
 
 /* Hover — Color */
 [data-text-link-type='Red']:hover {
-  color: var(--warning--darkest);
+  color: var(--_color-shades---warning--darkest);
 }
 
 [data-text-link-type='Red']:hover .btn--text-link-hover {
-  background-color: var(--warning--darkest);
+  background-color: var(--_color-shades---warning--darkest);
 }
 
 /* Hover — Underline*/
 [data-text-link-type='Red'][data-text-link-hover='Underline']:hover {
-  color: var(--warning--base);
+  color: var(--_color-tokens---state--warning);
 }
 
 [data-text-link-type='Red'][data-text-link-hover='Underline']:hover .btn--text-link-hover {
-  background-color: var(--warning--base);
+  background-color: var(--_color-tokens---state--warning);
 }
 
 /* Pressed */
 [data-text-link-type='Red']:active {
-  color: var(--warning--darkest);
+  color: var(--_color-tokens---content-neutral--black);
 }
 
 [data-text-link-type='Red']:active .btn--text-link-hover {
-  background-color: var(--warning--darkest);
+  background-color: var(--_color-tokens---border-neutral--black);
 }

@@ -4,7 +4,7 @@
 input,
 textarea,
 select {
-  caret-color: var(--_color-tokens---content--primary); /* Color of the text cursor */
+  caret-color: var(--_color-tokens---content-highlight--primary); /* Color of the text cursor */
 }
 
 /* Placeholder styles */
@@ -12,12 +12,12 @@ select {
 .w-select[data-placeholder]::placeholder {
   content: attr(data-current-placeholder) !important;
   transition: color 0.3s ease-out !important;
-  color: var(--_color-tokens---content--gray) !important;
+  color: var(--_color-tokens---content-neutral--base) !important;
 }
 
 .w-input[data-placeholder].hovered::placeholder,
 .w-select[data-placeholder].hovered::placeholder {
-  color: var(--neutral--darkest) !important;
+  color: var(--_color-tokens---content-neutral--dark) !important;
 }
 
 /* Custom focus style for mouse/touch */
@@ -33,7 +33,7 @@ select.w--focus {
 input.w--focus-visible,
 textarea.w--focus-visible,
 select.w--focus-visible {
-  border: 2px solid var(--neutral--base) !important;
+  border: 2px solid var(--_color-tokens---border-brand--base) !important;
   outline: 4px solid var(--_color-tokens---state--focused) !important;
   transition: border 0.3s ease-out;
 }

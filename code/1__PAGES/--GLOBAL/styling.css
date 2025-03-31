@@ -1,13 +1,13 @@
 /* Selected text has custom background color */
 ::-moz-selection {
   /* Code for Firefox */
-  color: var(--base--black);
-  background: var(--primary--base);
+  color: var(--_color-tokens---content-neutral--white);
+  background: var(--_color-tokens---bg-brand--base);
 }
 
 ::selection {
-  color: var(--base--black);
-  background: var(--primary--base);
+  color: var(--_color-tokens---content-neutral--white);
+  background: var(--_color-tokens---bg-brand--base);
 }
 
 /* Disable glossy effect safari adds on select elements */

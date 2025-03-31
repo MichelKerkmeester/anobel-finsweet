@@ -18,35 +18,33 @@
 ----------------------*/
 /* Dark */
 [data-caption-Type='Dark'] .caption {
-  color: var(--_color-tokens---content--secondary);
+  color: var(--_color-tokens---content-brand--base);
 }
 [data-caption-Type='Dark'] .caption--divider {
-  background-color: var(--_color-tokens---bg--blue);
+  background-color: var(--_color-tokens---border-brand--base);
 }
 
 /* Light */
 [data-caption-Type='Light'] .caption {
-  color: var(--_color-tokens---content--white);
+  color: var(--_color-tokens---content-neutral--white);
 }
 [data-caption-Type='Light'] .caption--divider {
-  background-color: var(--_color-tokens---bg--white);
+  background-color: var(--_color-tokens---border-neutral--white);
 }
 
 /* Dynamic */
 @media screen and (min-width: 992px) {
   [data-caption-Type='Dynamic'] .caption {
-    color: var(--_color-tokens---content--secondary);
+    color: var(--_color-tokens---content-brand--base);
   }
   [data-caption-Type='Dynamic'] .caption--divider {
-    background-color: var(--_color-tokens---bg--blue);
-  }
+    background-color: var(--_color-tokens---border-brand--base);
 }
 
 @media screen and (max-width: 991px) {
   [data-caption-Type='Dynamic'] .caption {
-    color: var(--_color-tokens---content--white);
+    color: var(--_color-tokens---content-neutral--white);
   }
   [data-caption-Type='Dynamic'] .caption--divider {
-    background-color: var(--_color-tokens---bg--white);
-  }
+    background-color: var(--_color-tokens---border-neutral--white);
 }

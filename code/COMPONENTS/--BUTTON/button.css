@@ -296,14 +296,14 @@ a.w-button {
 [data-btn-type='Secondary-Ghost'] {
   color: var(--_color-tokens---content-brand--base);
   background-color: var(--_color-tokens---bg-neutral--white);
-  border: 2px solid var(--_color-shades---secondary--dark);
+  border: 2px solid var(--_color-tokens---border-neutral--dark);
 }
 
 /* Hover  */
 [data-btn-type='Secondary-Ghost']:hover {
   color: var(--_color-tokens---content-brand--darkest);
   background-color: var(--_color-tokens---bg-neutral--white);
-  border: 2px solid var(--_color-shades---secondary--darkest);
+  border: 2px solid var(--_color-tokens---border-brand--darkest);
 }
 
 /* Pressed  */
@@ -322,7 +322,7 @@ a.w-button {
 /* Focused (Keyboard) */
 [data-btn-type='Secondary-Ghost']:focus-visible {
   color: var(--_color-tokens---content-brand--base);
-  border: 2px solid var(--_color-shades---secondary--darkest);
+  border: 2px solid var(--_color-tokens---border-neutral--dark);
   outline: 4px solid var(--_color-tokens---state--focused);
 }
 

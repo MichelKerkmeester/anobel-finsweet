@@ -16,13 +16,13 @@ function initializeHeroStates() {
     willChange: 'opacity, transform', // Optimize for performance
   });
 
-  gsap.set(['.hero--header', '.hero--service-list'], {
+  gsap.set(['.hero--header'], {
     opacity: 0,
     y: isDesktop ? '2rem' : isTablet ? '1.5rem' : '1rem',
     willChange: 'opacity, transform', // Optimize for performance
   });
 
-  gsap.set('.hero--section.is--home', {
+  gsap.set('.hero--section.is--video', {
     height: isDesktop ? '100svh' : isTablet ? '95svh' : isMobileTall ? '95svh' : '90svh',
   });
 
@@ -45,7 +45,7 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
   const isDesktop = vw >= 992;
   const isTablet = vw >= 768 && vw < 992;
   const isMobileLarge = vw >= 480 && vw < 768;
-  const isMobileTall = vw < 480 && vh >= 650; 
+  const isMobileTall = vw < 480 && vh >= 650;
   const isMobile = vw < 480;
 
   const tl = gsap.timeline({
@@ -87,7 +87,7 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
 
   // PHASE 2: Dramatic height reduction & content entry
   tl.to(
-    '.hero--section.is--home',
+    '.hero--section.is--video',
     {
       height: isDesktop
         ? vh <= 800
@@ -120,7 +120,7 @@ function createHeroIntroTimeline({ phase1Delay, delayBetweenPhase1And2 }) {
 
   // Increased stagger for content animation
   tl.to(
-    ['.hero--header', '.hero--service-list'],
+    ['.hero--header'],
     {
       opacity: 1,
       y: 0,
@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Optional: Add ScrollTrigger for interactive animations
   gsap.to('.hero--video', {
     scrollTrigger: {
-      trigger: '.hero--section.is--home',
+      trigger: '.hero--section.is--video',
       start: 'top top',
       end: 'bottom top',
       scrub: true,

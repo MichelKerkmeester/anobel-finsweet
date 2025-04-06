@@ -1,11 +1,21 @@
 {
   "extends": "@finsweet/tsconfig",
   "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "outDir": "./dist",
     "rootDir": ".",
     "baseUrl": "./",
     "paths": {
       "$utils/*": ["src/utils/*"]
     },
     "types": ["@finsweet/ts-utils"]
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

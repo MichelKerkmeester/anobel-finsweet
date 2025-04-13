@@ -11,9 +11,6 @@ importers:
       '@finsweet/ts-utils':
         specifier: ^0.40.0
         version: 0.40.0
-      dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
       node-fetch:
         specifier: ^3.3.2
         version: 3.3.2
@@ -45,6 +42,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
